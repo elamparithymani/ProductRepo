@@ -35,16 +35,19 @@ public class ProductController {
         return ResponseEntity.ok(product);
     }
 
+    //Get via categoryName
     @GetMapping("/category/{categoryName}")
     public List<Product> getProductsByCategory(@PathVariable String categoryName) {
         return productService.getProductsByCategory(categoryName);
     }
 
+    //Get via maxPrice
     @GetMapping("/price/{maxPrice}")
     public List<Product> getProductsByMaxPrice(@PathVariable Double maxPrice) {
         return productService.getProductsByPriceLessThanEqual(maxPrice);
     }
 
+    //Get via search by products
     @GetMapping("/search")
     public List<Product> searchProducts(@RequestParam String name) {
         return productService.getProductsByProductName(name);
