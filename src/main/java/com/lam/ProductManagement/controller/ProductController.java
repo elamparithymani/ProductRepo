@@ -92,6 +92,7 @@ public class ProductController {
         response.put("deleted", Boolean.TRUE);
 
         return ResponseEntity.ok(response);
+
     }
 
 }
