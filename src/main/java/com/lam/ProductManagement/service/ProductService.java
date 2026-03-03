@@ -25,7 +25,10 @@ public class ProductService {
     }
 
     public List<Product> getProductsByCategory(String category) {
-        return productRepository.findByCategory(category);
+
+                List<Product> categoryWiseProduct = productRepository.findByCategory(category);
+        //categoryWiseProduct = null;
+        return categoryWiseProduct;
     }
 
     public List<Product> getProductsByPriceLessThanEqual(Double maxPrice) {

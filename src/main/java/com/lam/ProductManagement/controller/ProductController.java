@@ -50,7 +50,7 @@ public class ProductController {
     //Get via search by products
     @GetMapping("/search")
     public List<Product> searchProducts(@RequestParam String name) {
-        return productService.getProductsByProductName(name);
+            return productService.getProductsByProductName(name);
     }
 
     // Create a new product
